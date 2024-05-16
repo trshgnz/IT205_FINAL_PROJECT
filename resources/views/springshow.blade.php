@@ -82,19 +82,18 @@
 <div class="container mt-4">
     <div class="row">
         <div class="col-md-6">
-            <img src="{{ asset('img/bubble.jpg') }}" class="product-image" alt="Product Image">
+            <img src="{{ asset('img/blooming.jpg') }}" class="product-image" alt="Product Image">
         </div>
         <div class="col-md-6 description">
-            <h1 class="text-danger">Marble Stack</h1>
+            <h1 class="text-danger">Spring Is Here Ring Set</h1>
             <h2 class="text-danger">₱399.00</h2><br>
             <p>
-                Elevate your style with our Marble Bubble Stack. Each bracelet features a unique blend of vibrant, multi-colored beads and lustrous pearls, handcrafted to perfection. These charming accessories are designed to add a pop of color and a touch of elegance to any outfit.<br>
+                Unleash your vibrant side with our Funky Fresh Color Pop Ring Collection! This set of five unique rings features playful designs like 'NYC' letters and whimsical flowers. Comfortable for all-day wear, they're perfect for parties or adding a pop of color to your everyday look.<br>
             </p>
             <ul>
-                <br><li>14k gold plated brass hoops with plastic charm</li>
-                <li>Hoop size: 0.7 inches</li>
-                <li>Flower charm: 0.7 inches</li>  
-                <li>Enamel charm: 0.6 inches</li>     
+                <br><li>High-quality mixed metals and colored enamel</li>
+                <li>Adjustable to fit sizes 5-9</li>
+                <li>Waterproof and sweatproof</li>     
             </ul>
             <div class="d-grid gap-2 col-6 mx-auto">
                 <button class="btn btn-danger btn-lg" type="button">Add To Cart</button>

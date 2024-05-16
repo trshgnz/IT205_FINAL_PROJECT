@@ -74,18 +74,18 @@
 <div class="container mt-4">
     <div class="row">
         <div class="col-md-6">
-            <img src="{{ asset('img/full of love1.jpg') }}" class="product-image" alt="Product Image">
+            <img src="{{ asset('img/ribb.jpg') }}" class="product-image" alt="Product Image">
         </div>
         <div class="col-md-6 description">
-            <h1 class="text-danger">Full of Love Bracelet</h1>
+            <h1 class="text-danger">Bow Ear Huggies</h1>
             <h2 class="text-danger">₱299.00</h2><br>
             <p>
-                Experience the blend of elegance and whimsy with this Full of Love Bracelet set, a timeless accessory that adds a touch of love to your style. Let the gold-colored heart links and the pink heart charm on the pearl bracelet be a sweet reminder of the beauty in simplicity.<br>
+                Elevate your style with our Bow Ear Huggies. This set includes two unique earrings: one with a bow design encrusted with sparkling gemstones, and the other a hoop with a heart-shaped pendant featuring a pink stone. Both gold earrings beautifully complement the glittering gemstones.<br>
             </p>
             <ul>
-                <li>Made with 18k thick gold plated material</li>
-                <li>Fresh water pearls and enamel pendant</li>
-                <li>6.5-7 inches with 2 inches extender</li><br>
+                <li>Made with 18k gold plated on brass</li>
+                <li>Cubis zirconia bow</li>
+                <li>6.5-7 inches</li><br>
             </ul>
             <div class="d-grid gap-2 col-6 mx-auto">
                 <button class="btn btn-danger btn-lg" type="button">Add To Cart</button>

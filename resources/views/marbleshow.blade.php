@@ -6,6 +6,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Satisfy" rel="stylesheet">
     <style>
+
+        
         body {
             font-family: "Raleway", sans-serif;
             background-color: #fff;
@@ -58,13 +60,19 @@
                     <a class="nav-link" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Products</a>
+                    <a class="nav-link" href="#">Summer Collection</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="#">Best Sellers</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="#">Shop</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">egister</a>
                 </li>
             </ul>
         </div>
@@ -74,18 +82,18 @@
 <div class="container mt-4">
     <div class="row">
         <div class="col-md-6">
-            <img src="{{ asset('img/full of love1.jpg') }}" class="product-image" alt="Product Image">
+            <img src="{{ asset('img/bubble.jpg') }}" class="product-image" alt="Product Image">
         </div>
         <div class="col-md-6 description">
-            <h1 class="text-danger">Full of Love Bracelet</h1>
-            <h2 class="text-danger">₱299.00</h2><br>
+            <h1 class="text-danger">Marble Bubble Stack</h1>
+            <h2 class="text-danger">₱399.00</h2><br>
             <p>
-                Experience the blend of elegance and whimsy with this Full of Love Bracelet set, a timeless accessory that adds a touch of love to your style. Let the gold-colored heart links and the pink heart charm on the pearl bracelet be a sweet reminder of the beauty in simplicity.<br>
+                Brighten your look with our Marble Bubble Stack. This set includes three unique pieces: one with colorful, variously shaped beads, another with pearl-like and flower-shaped beads, and a minimalist string bracelet for contrast.<br>
             </p>
             <ul>
-                <li>Made with 18k thick gold plated material</li>
-                <li>Fresh water pearls and enamel pendant</li>
-                <li>6.5-7 inches with 2 inches extender</li><br>
+                <br><li>High-quality beads and marble stones</li>
+                <li>6.5-7 inches</li>
+                <li>Waterproof and sweatproof</li>     
             </ul>
             <div class="d-grid gap-2 col-6 mx-auto">
                 <button class="btn btn-danger btn-lg" type="button">Add To Cart</button>

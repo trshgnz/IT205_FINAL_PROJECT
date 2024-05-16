@@ -74,18 +74,18 @@
 <div class="container mt-4">
     <div class="row">
         <div class="col-md-6">
-            <img src="{{ asset('img/full of love1.jpg') }}" class="product-image" alt="Product Image">
+            <img src="{{ asset('img/flashy.jpg') }}" class="product-image" alt="Product Image">
         </div>
         <div class="col-md-6 description">
-            <h1 class="text-danger">Full of Love Bracelet</h1>
-            <h2 class="text-danger">₱299.00</h2><br>
+            <h1 class="text-danger">Flashy Rings Set</h1>
+            <h2 class="text-danger">₱599.00</h2><br>
             <p>
-                Experience the blend of elegance and whimsy with this Full of Love Bracelet set, a timeless accessory that adds a touch of love to your style. Let the gold-colored heart links and the pink heart charm on the pearl bracelet be a sweet reminder of the beauty in simplicity.<br>
+                While you can’t buy class, you can certainly elevate your style with our Flashy Ring Set. A set of stunning statement pieces adorned with crystals that bring all the bling and ensure you stand out.<br>
             </p>
             <ul>
-                <li>Made with 18k thick gold plated material</li>
-                <li>Fresh water pearls and enamel pendant</li>
-                <li>6.5-7 inches with 2 inches extender</li><br>
+                <li>Made with 14k gold plated</li>
+                <li>Adjustable to fit sizes 5-9</li>
+                <li>Waterproof and sweatproof</li><br>
             </ul>
             <div class="d-grid gap-2 col-6 mx-auto">
                 <button class="btn btn-danger btn-lg" type="button">Add To Cart</button>

@@ -1,24 +1,27 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\JellypopShowController;
+use App\Http\Controllers\BearShowController;
+use App\Http\Controllers\BloodShowController;
 use App\Http\Controllers\BloomShowController;
-use App\Http\Controllers\BubbleShowController;
+use App\Http\Controllers\BowShowController;
 use App\Http\Controllers\DuoShowController;
 use App\Http\Controllers\EverydayShowController;
+use App\Http\Controllers\FlashyShowController;
+use App\Http\Controllers\FriendShowController;
 use App\Http\Controllers\HibiscusShowController;
+use App\Http\Controllers\JellypopShowController;
 use App\Http\Controllers\LoveShowController;
+use App\Http\Controllers\MarbleShowController;
 use App\Http\Controllers\PinkShowController;
+use App\Http\Controllers\SpringShowController;
 use App\Http\Controllers\SummerShowController;
 use App\Http\Controllers\WesternShowController;
+use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
 });
-
-
-
 
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [AuthController::class, 'login']);
@@ -34,5 +37,10 @@ Route::get('/everydayshow', [EverydayShowController::class, 'everydayshow'])->na
 Route::get('/pinkshow', [PinkShowController::class, 'pinkshow'])->name('pinkshow');
 Route::get('/loveshow', [LoveShowController::class, 'loveshow'])->name('loveshow');
 Route::get('/duoshow', [DuoShowController::class, 'duoshow'])->name('duoshow');
-Route::get('/bubbleshow', [BubbleShowController::class, 'bubbleshow'])->name('bubbleshow');
-
+Route::get('/marbleshow', [MarbleShowController::class, 'marbleshow'])->name('marbleshow');
+Route::get('/bowshow', [BowShowController::class, 'bowshow'])->name('bowshow');
+Route::get('/flashyshow', [FlashyShowController::class, 'flashyshow'])->name('flashyshow');
+Route::get('/friendshow', [FriendShowController::class, 'friendshow'])->name('friendshow');
+Route::get('/springshow', [SpringShowController::class, 'springshow'])->name('springshow');
+Route::get('/bloodshow', [BloodShowController::class, 'bloodshow'])->name('bloodshow');
+Route::get('/bearshow', [BearShowController::class, 'bearshow'])->name('bearshow');

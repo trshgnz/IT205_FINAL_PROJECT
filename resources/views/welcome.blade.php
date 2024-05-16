@@ -76,7 +76,7 @@
       
               <div class="section-title text-black">
                 <h2>♡ Summer Collection ♡</h2>
-                <p>discover our newest funky and aesthetic pieces specially curated to make your summer a little brighter and colorful.</p>
+                <p>discover our newest funky and aesthetic pieces specially curated to make your summer a little brighter and colorful</p>
               </div>
       
             </ul>
@@ -140,7 +140,7 @@
 
         <div class="section-title text-black">
           <h2>♡ Best Sellers ♡</h2>
-          <p>most-loved by our glitzy hoopz community from funky ring sets, hoop earrings, beaded necklaces and more.</p>
+          <p>most-loved by our glitzy hoopz community from funky ring sets, hoop earrings, beaded necklaces and more</p>
         </div>
 
       </ul>
@@ -221,7 +221,7 @@
               <h4>Marble Bubble Stack</h4>
               <p>₱399.00</p>
               <button type="button" class="btn btn-danger">
-                <a href="{{ route('duoshow') }}" class="text-decoration-none text-dark">View Product<br></a>
+                <a href="{{ route('marbleshow') }}" class="text-decoration-none text-dark">View Product<br></a>
               <a href="portfolio-details.html" class="details-link" title="More Details">
             </div>
           </div>
@@ -231,7 +231,8 @@
             <div class="portfolio-info">
               <h4>Bow Ear Huggie</h4>
               <p>₱299.00</p>
-              <a href="#" class="btn btn-outline-danger">Add To Cart</a>
+              <button type="button" class="btn btn-danger">
+                <a href="{{ route('bowshow') }}" class="text-decoration-none text-dark">View Product<br></a>
               <a href="portfolio-details.html" class="details-link" title="More Details">
             </div>
           </div>
@@ -241,7 +242,8 @@
             <div class="portfolio-info">
               <h4>Flashy Ring Set</h4>
               <p>₱599.00</p>
-              <a href="#" class="btn btn-outline-danger">Add To Cart</a>
+              <button type="button" class="btn btn-danger">
+                <a href="{{ route('flashyshow') }}" class="text-decoration-none text-dark">View Product<br></a>
               <a href="portfolio-details.html" class="details-link" title="More Details">
             </div>
           </div>
@@ -251,7 +253,8 @@
             <div class="portfolio-info">
               <h4>Friendship Charm Bracelet</h4>
               <p>₱599.00</p>
-              <a href="#" class="btn btn-outline-danger">Add To Cart</a>
+              <button type="button" class="btn btn-danger">
+                <a href="{{ route('friendshow') }}" class="text-decoration-none text-dark">View Product<br></a>
               <a href="portfolio-details.html" class="details-link" title="More Details">
             </div>
 
@@ -261,7 +264,8 @@
             <div class="portfolio-info">
               <h4>Spring Is Here Ring Set</h4>
               <p>₱399.00</p>
-              <a href="#" class="btn btn-outline-danger">Add To Cart</a>
+              <button type="button" class="btn btn-danger">
+                <a href="{{ route('springshow') }}" class="text-decoration-none text-dark">View Product<br></a>
               <a href="portfolio-details.html" class="details-link" title="More Details">
             </div>
 
@@ -271,7 +275,8 @@
             <div class="portfolio-info">
               <h4>Bear Hug Necklace</h4>
               <p>₱699.00</p>
-              <a href="#" class="btn btn-outline-danger">Add To Cart</a>
+              <button type="button" class="btn btn-danger">
+                <a href="{{ route('bearshow') }}" class="text-decoration-none text-dark">View Product<br></a>
               <a href="portfolio-details.html" class="details-link" title="More Details">
             </div>
 
@@ -281,7 +286,8 @@
             <div class="portfolio-info">
               <h4>Bad Blood Necklace</h4>
               <p>₱999.00</p>
-              <a href="#" class="btn btn-outline-danger">Add To Cart</a>
+              <button type="button" class="btn btn-danger">
+                <a href="{{ route('bloodshow') }}" class="text-decoration-none text-dark">View Product<br></a>
               <a href="portfolio-details.html" class="details-link" title="More Details">
             </div>
           </div>
