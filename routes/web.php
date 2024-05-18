@@ -17,6 +17,10 @@ use App\Http\Controllers\PinkShowController;
 use App\Http\Controllers\SpringShowController;
 use App\Http\Controllers\SummerShowController;
 use App\Http\Controllers\WesternShowController;
+use App\Http\Controllers\CheckoutShowController;
+use App\Http\Controllers\WelcomeController;
+
+
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -44,3 +48,6 @@ Route::get('/friendshow', [FriendShowController::class, 'friendshow'])->name('fr
 Route::get('/springshow', [SpringShowController::class, 'springshow'])->name('springshow');
 Route::get('/bloodshow', [BloodShowController::class, 'bloodshow'])->name('bloodshow');
 Route::get('/bearshow', [BearShowController::class, 'bearshow'])->name('bearshow');
+Route::get('/checkoutshow', [CheckoutShowController::class, 'checkoutshow'])->name('checkoutshow');
+Route::get('/welcome', [WelcomeController::class, 'welcome'])->name('welcome');
+

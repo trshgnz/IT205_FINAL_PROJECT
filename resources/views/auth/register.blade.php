@@ -2,73 +2,119 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Glitzy Hoopz - Register</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Satisfy" rel="stylesheet">
+    <link href="{{asset('vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
+    <link href="{{asset('vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
+    <link href="{{asset('vendor/glightbox/css/glightbox.min.css')}}" rel="stylesheet">
+    <link href="{{asset('vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
+    <link href="{{ asset('css/style.css')  }}" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Open Sans', sans-serif;
+        }
 
-  <title>Glitzy Hoopz</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+        .container {
+            max-width: 600px;
 
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Satisfy" rel="stylesheet">
-  <link href="{{asset('vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
-  <link href="{{asset('vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
-  <link href="{{asset('vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
-  <link href="{{asset('vendor/glightbox/css/glightbox.min.css')}}" rel="stylesheet">
-  <link href="{{asset('vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
-  <link href="{{ asset('css/style.css')  }}" rel="stylesheet">
+            margin: 0 auto;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        .register-form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .login-form img {
+            max-width: 350px;
+            margin-bottom: 20px;
+        }
+
+        .register-form h2 {
+            margin-bottom: -20px;
+            font-size: 50px;
+            font-family: 'Satisfy', cursive;
+            color: #FF99CD;
+        }
+
+        .register-form label {
+            font-weight: 600;
+            color: black;
+            display: block;
+            text-align: left;
+        }
+
+        .register-form input[type="text"],
+        .register-form input[type="email"],
+        .register-form input[type="password"] {
+            border-radius: 20px;
+            border: 1px solid #ced4da;
+            padding: 12px;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        .register-form button[type="submit"] {
+            background-color: #FF99CD;
+            color: #fff;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 20px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .register-form button[type="submit"]:hover {
+            background-color: #FF99CD;
+        }
+    </style>
 </head>
 
 <body>
     <div class="container">
-        <h2></h2>
-        <form method="POST" action="{{ route('register') }}">
-            @csrf
-    
-            <div class="container">
-               
-                <div class="text-center mb-4">
-                    <img src="{{ asset('img/logo.png') }}" alt="" class="img-fluid">
-                  
+        <div class="register-form">
+            <h2>Register</h2>
+            <form method="POST" action="{{ route('register') }}">
+                @csrf
+                <img src="{{ asset('img/logo.png') }}" alt="Logo">       
+
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" class="form-control" value="{{ old('name') }}" required>
                 </div>
 
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" class="form-control" value="{{ old('name') }}" required>
-            </div>
-    
-            <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" class="form-control" value="{{ old('email') }}" required>
-                <input type="email" id="email" name="address" value="address" class="form-control" value="{{ old('email') }}" required hidden>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" class="form-control" value="{{ old('email') }}" required>
+                </div>
 
-            </div>
-    
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" class="form-control" required>
-            </div>
-    
-            <div class="form-group">
-                <label for="password_confirmation">Confirm Password</label>
-                <input type="password" id="password_confirmation" name="password_confirmation" class="form-control" required>
-            </div>
-    
-            <button type="submit" class="btn btn-danger">Register</button>
-        </form>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password_confirmation">Confirm Password</label>
+                    <input type="password" id="password_confirmation" name="password_confirmation" class="form-control" required>
+                </div>
+
+                <button type="submit" class="btn btn-block">Register</button>
+            </form>
+        </div>
     </div>
-    
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-  <script src="{{asset('vendor/purecounter/purecounter_vanilla.js')}}"></script>
-  <script src="{{asset('vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-  <script src="{{asset('vendor/glightbox/js/glightbox.min.js')}}"></script>
-  <script src="{{asset('vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
-  <script src="{{asset('vendor/swiper/swiper-bundle.min.js')}}"></script>
-  <script src="{{asset('vendor/waypoints/noframework.waypoints.js')}}"></script>
-  <script src="{{asset('vendor/php-email-form/validate.js')}}"></script>
-
-  <script src="{{asset('js/main.js')}}"></script>
-
+    <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 </body>
 
 </html>

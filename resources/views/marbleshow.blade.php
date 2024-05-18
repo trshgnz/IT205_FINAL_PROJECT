@@ -54,35 +54,13 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Summer Collection</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Best Sellers</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Shop</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Login</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">egister</a>
-                </li>
-            </ul>
-        </div>
-    </div>
+       
 </nav>
 
 <div class="container mt-4">
     <div class="row">
         <div class="col-md-6">
-            <img src="{{ asset('img/bubble.jpg') }}" class="product-image" alt="Product Image">
+            <img src="{{ asset('img/bubble2.jpg') }}" class="product-image" alt="Product Image">
         </div>
         <div class="col-md-6 description">
             <h1 class="text-danger">Marble Bubble Stack</h1>

@@ -17,6 +17,7 @@
   <link href="{{asset('vendor/glightbox/css/glightbox.min.css')}}" rel="stylesheet">
   <link href="{{asset('vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
 
+
   <link href="{{ asset('css/style.css')  }}" rel="stylesheet">
  
  
@@ -30,27 +31,30 @@
   <header id="header" class="fixed-top d-flex justify-content-center align-items-center header-transparent">
     
      
-    <nav id="navbar" class="navbar">
-      <ul>
-        <li><a class="nav-link scrollto" href="#hero">Home</a></li>
-        <li><a class="nav-link scrollto" href="#summercollection">Summer Collection</a></li>
-        <li><a class="nav-link scrollto" href="#best_sellers">Best Sellers</a></li>
-        <li><a class="nav-link scrollto" href="#shop">Shop</a></li>
-        <li><a class="nav-link scrollto" href="{{route('login')}}">Log In</a></li>
-        <li><a class="nav-link scrollto" href="{{route('register')}}">Register</a></li>
-
-
-      </ul>
-      <i class="bi bi-list mobile-nav-toggle"></i>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#summercollection">Summer Collection</a></li>
+          <li><a class="nav-link scrollto" href="#best_sellers">Best Sellers</a></li>
+          <li><a class="nav-link scrollto" href="#shop">Shop</a></li>
+          <li><a class="nav-link scrollto" href="{{route('checkoutshow')}}">Cart</a></li>
+         
+  
+           
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+               More
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="nav-link scrollto" href="{{route('login')}}">Log In</a></li>
+                <li><a class="nav-link scrollto" href="{{route('register')}}">Register</a></li>
+                
+              </ul>
+            </li>
+          </ul>
+            
     </nav>
-    
-      <nav class="navbar bg-body-tertiary">
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-light"type="submit">Search</button>
-        </form>
-      </nav>
-    </div>
     
 
   </header>
@@ -62,7 +66,7 @@
             <img src="{{ asset('img/logo.png') }}" alt="" class="img-fluid">
         </div>
        
-      <a href="#summercollection" class="btn-scroll scrollto" title="Scroll Down"><i class="bx bx-chevron-down"></i></a>
+      
     </div>
   </section>
 
