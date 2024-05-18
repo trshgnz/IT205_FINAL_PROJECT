@@ -5,13 +5,18 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Products extends Model
+class Orders extends Model
 {
     use HasFactory;
 
-    public function orders()
+    public function user()
     {
-        return $this->belongsToMany(Orders::class, 'order_products')
+        return $this->belongsTo(User::class);
+    }
+
+    public function products()
+    {
+        return $this->belongsToMany(Products::class, 'order_products')
                     ->withPivot('quantity', 'price')
                     ->withTimestamps();
     }
