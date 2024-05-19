@@ -88,55 +88,24 @@
             
             <div class="container text-center">
               <div class="row align-items-start">
+                @foreach ($summerCollectionProducts as $summerCollectionProduct)
                 <div class="col">
                   <div class="card" style="width: 18rem;">
-                      <img src="{{asset('img/jelly (2).jpg')}}" class="card-img-top" alt="...">
+                      <img src="{{asset($summerCollectionProduct->image)}}" class="card-img-top" alt="...">
                       <div class="card-body">
-                        <h5 class="card-title text-black">Jellypop Necklace</h5>
-                        {{-- <a href="{{ route('jellypopshow') }}" class="text-decoration-none text-dark"> Jellypop Necklace <br></a> --}}
+                        <h5 class="card-title text-black">{{ $summerCollectionProduct->name }}</h5>
 
-                        <p class="card-text text-black">₱299.00</p>
+                        <p class="card-text text-black">₱{{ number_format($summerCollectionProduct->price,2,'.') }}</p>
                         <button type="button" class="btn btn-outline-danger">
-                          <a href="{{ route('jellypopshow') }}" class="text-decoration-none text-dark">View Product<br></a>
+                          <a href="{{ route('product.show', $summerCollectionProduct->id) }}" class="text-decoration-none text-dark">View Product<br></a>
                         </button>
                     </div>
                     </div>
                 </div>
-                <div class="col">
-                  <div class="card" style="width: 18rem;">
-                      <img src="{{asset('img/hoops1.jpg')}}" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title text-black">Bloom Hoop Earrings</h5>
-                        <p class="card-text text-black">₱199.00</p>
-                        <button type="button" class="btn btn-outline-danger">
-                        <a href="{{ route('bloomshow') }}" class="text-decoration-none text-dark">View Product<br></a>
-                      </button>
-                    </div>
-                    </div>
-                </div>
-                <div class="col">
-                  <div class="card" style="width: 18rem;">
-                      <img src="{{asset('img/NA.jpg')}}" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title text-black">Hibiscus Layered Necklace</h5>
-                        <p class="card-text text-black">₱499.00</p>
-                        <button type="button" class="btn btn-outline-danger">
-                        <a href="{{ route('hibiscusshow') }}" class="text-decoration-none text-dark">View Product<br></a>
-                      </button>
-                    </div>
-                    </div>
-                </div>
-                <div class="col">
-                  <div class="card" style="width: 18rem;">
-                      <img src="{{asset('img/summer.jpg')}}" class="card-img-top" alt="...">
-                      <div class="card-body">
-                        <h5 class="card-title text-black">Summer Ring Set</h5>
-                        <p class="card-text text-black">₱399.00</p>
-                        <button type="button" class="btn btn-outline-danger">
-                          <a href="{{ route('summershow') }}" class="text-decoration-none text-dark">View Product<br></a>
-                        </button>
-                    </div>
-      
+                @endforeach
+                
+              </div>
+            </div>
                     </section>
 
     <section id="best_sellers" class="services">
@@ -146,58 +115,26 @@
           <h2>♡ Best Sellers ♡</h2>
           <p>most-loved by our glitzy hoopz community from funky ring sets, hoop earrings, beaded necklaces and more</p>
         </div>
+        <div class="container text-center">
+          <div class="row align-items-start">
+            @foreach ($bestSellerProducts as $bestSellerProduct)
+            <div class="col">
+              <div class="card" style="width: 18rem;">
+                  <img src="{{asset($bestSellerProduct->image)}}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title text-black">{{ $bestSellerProduct->name }}</h5>
 
-      </ul>
-
-      <div class="container text-center">
-        <div class="row align-items-start">
-          <div class="col">
-            <div class="card" style="width: 18rem;">
-                <img src="{{asset('img/western wed.jpg')}}" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title text-black">Western Wed Necklace</h5>
-                  <p class="card-text text-black">₱599.00</p>
-                  <button type="button" class="btn btn-outline-danger">
-                    <a href="{{ route('westernshow') }}" class="text-decoration-none text-dark">View Product<br></a>
-                  </button>
+                    <p class="card-text text-black">₱{{ number_format($bestSellerProduct->price,2,'.') }}</p>
+                    <button type="button" class="btn btn-outline-danger">
+                      <a href="{{ route('product.show', $bestSellerProduct->id) }}" class="text-decoration-none text-dark">View Product<br></a>
+                    </button>
                 </div>
-              </div>
+                </div>
+            </div>
+            @endforeach
+            
           </div>
-          <div class="col">
-            <div class="card" style="width: 18rem;">
-                <img src="{{asset('img/11.jpg')}}" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title text-black">Everyday Ring Set</h5>
-                  <p class="card-text text-black">₱399.00</p>
-                  <button type="button" class="btn btn-outline-danger">
-                    <a href="{{ route('everydayshow') }}" class="text-decoration-none text-dark">View Product<br></a>
-                  </button>
-                </div>
-              </div>
-          </div>
-          <div class="col">
-            <div class="card" style="width: 18rem;">
-                <img src="{{asset('img/fairy.jpg')}}" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title text-black">Pink Fairy Earrings Set</h5>
-                  <p class="card-text text-black">₱499.00</p>
-                  <button type="button" class="btn btn-outline-danger">
-                    <a href="{{ route('pinkshow') }}" class="text-decoration-none text-dark">View Product<br></a>
-                  </button>
-                </div>
-              </div>
-          </div>
-          <div class="col">
-            <div class="card" style="width: 18rem;">
-                <img src="{{asset('img/full of love1.jpg')}}" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title text-black">Full of Love Bracelet</h5>
-                  <p class="card-text text-black">₱299.00</p>
-                  <button type="button" class="btn btn-outline-danger">
-                    <a href="{{ route('loveshow') }}" class="text-decoration-none text-dark">View Product<br></a>
-                  </button>
-                </div>
-
+        </div>
               </section>
     <section id="shop" class="portfolio">
       <div class="container">
@@ -207,95 +144,18 @@
         </div>
 
         <div class="row portfolio-container">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-img"><img src="{{asset('img/hoops.jpg')}}" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>Duo Hoop Earrings</h4>
-              <p>₱299.00</p>
-              <button type="button" class="btn btn-danger">
-              <a href="{{ route('duoshow') }}" class="text-decoration-none text-dark">View Product<br></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details">
-            </div>
-          </div>
-
+          @foreach ($complexGridProducts as $complexGridProduct)
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-img"><img src="{{asset('img/bubble.jpg')}}" class="img-fluid" alt=""></div>
+            <div class="portfolio-img"><img src="{{asset($complexGridProduct->image)}}" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
-              <h4>Marble Bubble Stack</h4>
-              <p>₱399.00</p>
+              <h4>{{ $complexGridProduct->name }}</h4>
+              <p>₱{{ number_format($complexGridProduct->price,2,'.') }}</p>
               <button type="button" class="btn btn-danger">
-                <a href="{{ route('marbleshow') }}" class="text-decoration-none text-dark">View Product<br></a>
+              <a href="{{ route('product.show', $complexGridProduct->id) }}" class="text-decoration-none text-dark">View Product<br></a>
               <a href="portfolio-details.html" class="details-link" title="More Details">
             </div>
           </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-img"><img src="{{asset('img/ribb.jpg')}}" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>Bow Ear Huggie</h4>
-              <p>₱299.00</p>
-              <button type="button" class="btn btn-danger">
-                <a href="{{ route('bowshow') }}" class="text-decoration-none text-dark">View Product<br></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details">
-            </div>
-          </div>
-          
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-img"><img src="{{asset('img/flashy.jpg')}}" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>Flashy Ring Set</h4>
-              <p>₱599.00</p>
-              <button type="button" class="btn btn-danger">
-                <a href="{{ route('flashyshow') }}" class="text-decoration-none text-dark">View Product<br></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details">
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-img"><img src="{{asset('img/charm.jpg')}}" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>Friendship Charm Bracelet</h4>
-              <p>₱599.00</p>
-              <button type="button" class="btn btn-danger">
-                <a href="{{ route('friendshow') }}" class="text-decoration-none text-dark">View Product<br></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details">
-            </div>
-
-          </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-img"><img src="{{asset('img/blooming.jpg')}}" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>Spring Is Here Ring Set</h4>
-              <p>₱399.00</p>
-              <button type="button" class="btn btn-danger">
-                <a href="{{ route('springshow') }}" class="text-decoration-none text-dark">View Product<br></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details">
-            </div>
-
-          </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-img"><img src="{{asset('img/bh.jpg')}}" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>Bear Hug Necklace</h4>
-              <p>₱699.00</p>
-              <button type="button" class="btn btn-danger">
-                <a href="{{ route('bearshow') }}" class="text-decoration-none text-dark">View Product<br></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details">
-            </div>
-
-          </div>
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-img"><img src="{{asset('img/sum.jpg')}}" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>Bad Blood Necklace</h4>
-              <p>₱999.00</p>
-              <button type="button" class="btn btn-danger">
-                <a href="{{ route('bloodshow') }}" class="text-decoration-none text-dark">View Product<br></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details">
-            </div>
-          </div>
-
+          @endforeach
         </div>
 
       </div>

@@ -18,20 +18,21 @@ use App\Http\Controllers\SpringShowController;
 use App\Http\Controllers\SummerShowController;
 use App\Http\Controllers\WesternShowController;
 use App\Http\Controllers\CheckoutShowController;
+use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\WelcomeController;
 
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [LandingPageController::class, 'index'])->name('landing-page');
 
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [AuthController::class, 'login']);
 Route::get('/register', [AuthController::class, 'showRegistrationForm'])->name('register');
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+Route::get('/welcome', [WelcomeController::class, 'welcome'])->name('welcome');
+Route::get('/checkoutshow', [CheckoutShowController::class, 'checkoutshow'])->name('checkoutshow');
 Route::get('/jellypopshow', [JellypopShowController::class, 'jellypopshow'])->name('jellypopshow');
 Route::get('/bloomshow', [BloomShowController::class, 'bloomshow'])->name('bloomshow');
 Route::get('/hibiscushow', [HibiscusShowController::class, 'hibiscusshow'])->name('hibiscusshow');
@@ -48,6 +49,5 @@ Route::get('/friendshow', [FriendShowController::class, 'friendshow'])->name('fr
 Route::get('/springshow', [SpringShowController::class, 'springshow'])->name('springshow');
 Route::get('/bloodshow', [BloodShowController::class, 'bloodshow'])->name('bloodshow');
 Route::get('/bearshow', [BearShowController::class, 'bearshow'])->name('bearshow');
-Route::get('/checkoutshow', [CheckoutShowController::class, 'checkoutshow'])->name('checkoutshow');
-Route::get('/welcome', [WelcomeController::class, 'welcome'])->name('welcome');
+Route::get('/product/{product}', [LandingPageController::class, 'show'])->name('product.show');
 
