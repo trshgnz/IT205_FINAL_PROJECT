@@ -38,7 +38,9 @@
           <li><a class="nav-link scrollto" href="#summercollection">Summer Collection</a></li>
           <li><a class="nav-link scrollto" href="#best_sellers">Best Sellers</a></li>
           <li><a class="nav-link scrollto" href="#shop">Shop</a></li>
-          <li><a class="nav-link scrollto" href="{{route('checkoutshow')}}">Cart</a></li>
+          @if(Auth::user())
+          <li><a class="nav-link scrollto" href="{{route('cart.show')}}">Cart</a></li>
+          @endif
          
   
            
@@ -47,9 +49,20 @@
                More
               </a>
               <ul class="dropdown-menu">
+                @if(!Auth::user())
                 <li><a class="nav-link scrollto" href="{{route('login')}}">Log In</a></li>
                 <li><a class="nav-link scrollto" href="{{route('register')}}">Register</a></li>
-                
+                @endif
+                @if(Auth::user())
+              <li>
+                <form action="{{ route('logout') }}" method="POST" id="logout-form">
+                  @csrf
+                  <a class="nav-link scrollto" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                    Logout
+                </a>
+                </form>
+              </li>
+              @endif
               </ul>
             </li>
           </ul>

@@ -91,9 +91,9 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <form method="POST" action="{{ route('welcome') }}" enctype="multipart/form-data">
+           
 
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="/">
                 <img src="{{ asset('img/logo.png') }}" alt="Logo">
             </a>           
     </div>
@@ -117,7 +117,11 @@
                 @endforeach
             </ul>
             <div class="d-grid gap-2 col-6 mx-auto">
-                <button class="btn btn-danger btn-lg" type="button">Add To Cart</button>
+                <form action="{{ route('product.add-to-cart') }}" method="POST">
+                    @csrf
+                    <input type="hidden" name="product_id" value="{{ $product->id }}">
+                    <button class="btn btn-danger btn-lg" type="submit">Add To Cart</button>
+                </form>
             </div>
         </div>
     </div>

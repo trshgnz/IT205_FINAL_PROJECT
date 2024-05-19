@@ -102,24 +102,22 @@
 <body>
     <div class="container">
         <h1>Shopping Bag</h1>
-        <div class="product">
-            <img src="{{ asset('img/bh.jpg') }}" alt="Product Image">
-            <div class="product-info">
-                <div class="product-title">Bear Hug Necklace</div>
-                <div class="product-price">₱699.00</div>
-                <input type="number" class="quantity-input" value="1" min="1">
+        <form action="{{ route('checkout') }}" method="POST">
+            @csrf
+            @foreach($cart->products as $cartProducts)
+            <div class="product">
+                <img src="{{ asset($cartProducts->image) }}" alt="Product Image">
+                <div class="product-info">
+                    <div class="product-title">{{ $cartProducts->name }}</div>
+                    <div class="product-price">{{ number_format($cartProducts->price,2,'.') }}</div>
+                    <input type="number" class="quantity-input" name="product_id[]" value="{{ $cartProducts->id }}" hidden>
+                    <input type="number" class="quantity-input" name="quantity[]" value="{{ $cartProducts->pivot->quantity }}" min="1">
+                </div>
             </div>
-        </div>
-        <div class="product">
-            <img src="{{ asset('img/sum.jpg') }}" alt="Product Image">
-            <div class="product-info">
-                <div class="product-title">Bad Blood Necklace</div>
-                <div class="product-price">₱999.00</div>
-                <input type="number" class="quantity-input" value="1" min="1">
-            </div>
-            
-        </div>
-        <button class="checkout-button">Checkout</button>
+            @endforeach
+            <button type="submit" class="checkout-button">Checkout</button>
+        </form>
+    </div>
     </div>
 </body>
 
