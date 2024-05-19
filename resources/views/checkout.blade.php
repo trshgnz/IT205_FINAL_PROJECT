@@ -104,6 +104,13 @@
         <h1>Shopping Bag</h1>
         <form action="{{ route('checkout') }}" method="POST">
             @csrf
+            @if (is_null($cart))
+                <div class="product">
+                    <div class="product-info">
+                        <div class="product-title">No products in cart</div>
+                    </div>
+                </div>
+            @else
             @foreach($cart->products as $cartProducts)
             <div class="product">
                 <img src="{{ asset($cartProducts->image) }}" alt="Product Image">
@@ -115,6 +122,8 @@
                 </div>
             </div>
             @endforeach
+            @endif
+            
             <button type="submit" class="checkout-button">Checkout</button>
         </form>
     </div>

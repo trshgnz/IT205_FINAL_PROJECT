@@ -67,7 +67,6 @@ class LandingPageController extends Controller
         $cart = Orders::where('user_id', auth()->user()->id)
             ->where('status', 'pending')
             ->first();
-
         return view('checkout')->with('cart', $cart);
     }
 
