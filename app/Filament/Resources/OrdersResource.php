@@ -37,7 +37,6 @@ class OrdersResource extends Resource
                 Tables\Columns\TextColumn::make('id')->sortable(),
                 Tables\Columns\TextColumn::make('user.name')->label('User')->sortable(),
                 Tables\Columns\TextColumn::make('total_price')->sortable(),
-                Tables\Columns\TextColumn::make('status')->sortable(),
                 Tables\Columns\TextColumn::make('created_at')->dateTime()->sortable(),
                 Tables\Columns\TextColumn::make('updated_at')->dateTime()->sortable(),
                 SelectColumn::make('status')
