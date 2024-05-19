@@ -11,6 +11,9 @@ use Filament\Forms\Form;
 use Filament\Tables\Table;
 use Illuminate\Support\Str;
 use Filament\Resources\Resource;
+use Filament\Tables\Actions\Action;
+
+use Filament\Tables\Columns\SelectColumn;
 use App\Filament\Resources\OrdersResource\Pages;
 
 class OrdersResource extends Resource
@@ -37,6 +40,11 @@ class OrdersResource extends Resource
                 Tables\Columns\TextColumn::make('status')->sortable(),
                 Tables\Columns\TextColumn::make('created_at')->dateTime()->sortable(),
                 Tables\Columns\TextColumn::make('updated_at')->dateTime()->sortable(),
+                SelectColumn::make('status')
+                    ->options([
+                        'completed' => 'Completed',
+                        'cancelled' => 'Cancelled',
+                    ])
             ]);
     }
 
