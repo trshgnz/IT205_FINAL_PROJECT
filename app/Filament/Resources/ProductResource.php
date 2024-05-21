@@ -26,6 +26,11 @@ class ProductResource extends Resource
             ->schema([
                 Forms\Components\TextInput::make('name'),
                 Forms\Components\TextInput::make('price')->numeric()->integer(),
+                Forms\Components\TextInput::make('description'),
+                Forms\Components\TextInput::make('details'),
+                Forms\Components\TextInput::make('category'),
+                Forms\Components\FileUpload::make('image')->disk('public_assets')->directory('/img'),
+
             ]);
     }
 

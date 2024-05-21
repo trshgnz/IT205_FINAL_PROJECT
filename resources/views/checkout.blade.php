@@ -14,6 +14,7 @@
             padding: 0;
             background-color: #f8f9fa;
             
+            
         }
 
         .container {
@@ -100,6 +101,7 @@
 </head>
 
 <body>
+    
     <div class="container">
         <h1>Shopping Bag</h1>
         <form action="{{ route('checkout') }}" method="POST">
@@ -107,7 +109,9 @@
             @if (is_null($cart))
                 <div class="product">
                     <div class="product-info">
-                        <div class="product-title">No products in cart</div>
+                        <div class="product-title">Your cart is currently empty <br>
+                            BRB! Going to fill up my cart 🛒💕
+                        </div>
                     </div>
                 </div>
             @else
