@@ -128,6 +128,12 @@
             @endforeach
             @endif
             
+            <div class="product">
+                <div class="product-title">Total Price: ₱{{$cart->total_price}}</div>
+                    
+               
+            </div>
+            
             <button type="submit" class="checkout-button">Checkout</button>
         </form>
     </div>
